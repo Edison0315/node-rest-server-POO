@@ -82,17 +82,10 @@ const usuariosDelete = async(req, res = response) => {
     })
 }
 
-const usuariosPatch = (req, res = response) => {
-    res.json({
-        msg: "get API - Controlador"
-    })
-}
-
 module.exports = {
     usuariosGet,
     usuariosPost,
     usuariosPut,
-    usuariosPatch,
     usuariosDelete
 
 }
