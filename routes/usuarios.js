@@ -9,8 +9,11 @@ const {
     tieneRol
 } = require('../middleware');
 
-
-const { esRolValido, emailExiste, existeUsuarioPorId } = require('../helpers/db-validators');
+const { 
+    esRolValido, 
+    emailExiste, 
+    existeUsuarioPorId
+} = require('../helpers/db-validators');
 
 const { 
     usuariosGet, 
@@ -19,6 +22,10 @@ const {
     usuariosDelete } = require('../controllers/usuarios'); 
 
 const router = Router(); 
+
+// ******************
+// Rutas - Categorias
+// ******************
 
 router.get('/', 
     validarTipoNumber

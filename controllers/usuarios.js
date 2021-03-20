@@ -11,15 +11,11 @@ const usuariosGet = async(req = request, res = response) => {
     // Query del condicional
     const query = { estado: true }
 
-    // const usuarios = await Usuario.find({estado: true})
-    //     .skip(desde)
-    //     .limit(limite)
-
-    // const total    = await Usuario.countDocuments({estado: true});
-
     const [ total, usuarios ] = await Promise.all([
         Usuario.countDocuments(query),
         Usuario.find(query)
+               .skip(desde)
+               .limit(limite)
     ])
 
     res.json({
